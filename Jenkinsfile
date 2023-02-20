@@ -2,7 +2,7 @@ pipeline {
   agent {
     node {
       label 'my-nodejs'
-      tools {nodejs "Node.js 19.2.0"}
+      tool 'Node.js 19.2.0'
     }
   }
   stages {

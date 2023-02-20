@@ -1,23 +1,27 @@
 pipeline {
-  agent any
-
+  agent {
+    node {
+      label 'my-nodejs'
+      tool 'Node.js 19.2.0'
+    }
+  }
+  
   stages {
-    stage('Test') {
+    stage('Checkout') {
       steps {
+        git branch: 'master', url: 'https://github.com/EBFantasy/CI-CD-Project.git'
+      }
+    }
+
+    stage('Build and Deploy') {
+      steps {
+
         sh 'npm install'
-        sh 'npm run test'
-      }
-    }
-    stage('Build') {
-      steps {
-        sh 'npm run build'
-      }
-    }
-    stage('Deploy') {
-      steps {
-        sh 'npm install -g surge'
-        sh 'surge ./build yourdomain.surge.sh'
+
+        sh 'npm start'
+        
       }
     }
   }
 }
+

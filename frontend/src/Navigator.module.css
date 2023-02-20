@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+.navMenu {
+    font-family: "Montserrat", sans-serif;
+    position: absolute;
+    left: 43.5%;
+}
+  
+.navMenu .navComponent {
+    color: #000000;
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    display: inline;
+    margin-right: 50px;
+    font-weight: 750;
+    width: 80px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+  
+.navMenu .navComponent:hover {
+    color: #9390fb;
+}
+  
+.navMenu .dot {
+    width: 10px;
+    height: 10px;
+    background: #9390fb;
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-transform: translateX(30px);
+    transform: translateX(30px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+  
+.navMenu .navComponent:nth-child(1):hover ~ .dot {
+    -webkit-transform: translateX(30px);
+    transform: translateX(30px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+}
+  
+.navMenu .navComponent:nth-child(2):hover ~ .dot {
+    -webkit-transform: translateX(165px);
+    transform: translateX(165px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+}
+  
+.navMenu .navComponent:nth-child(3):hover ~ .dot {
+    -webkit-transform: translateX(300px);
+    transform: translateX(300px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+}
+  
+

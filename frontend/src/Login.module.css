@@ -1,0 +1,232 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.Box {
+    width: 1000px;
+    height: 535px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: animated-border 1.5s infinite;
+    border: 2px solid;
+    border-radius: 10px;
+    padding: 15px;
+    background-image: url("./pictures/backgroundBox.png");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.loginBox {
+    float: right;
+    width: 500px;
+    position: relative;
+}
+
+.loginBox .dividingLine {
+    position: relative;
+    border: 1px solid rgb(0, 0, 0);
+    box-sizing: border-box;
+    margin: 50px;
+}
+
+.loginBox .dividingLine .title {
+    position: absolute;
+    top:-17px;
+    left: 43%;
+    line-height: 2em;
+    padding:0 1em;
+    background-color: #fff;
+}
+
+.loginBox .googleLogin {
+    border-radius: 4px !important; 
+    border: 0.5px solid black !important;
+    background: none;
+    display: block;
+    margin: 20px 0 0 100px;
+    padding: 5px 10px;
+    width: 300px;
+    outline: none;
+    cursor: pointer;
+}
+
+.loginBox .googleLogin span {
+    position: relative;
+    font-size: 16px;
+    top: -1px;
+    margin: 0 20px 0 18px;
+    font-weight: bold;
+    color: black;
+}
+
+/*
+.loginBox .googleLogin img {
+    position: relative;
+    top: 2px;
+    height: 24px;
+    width: 24px;
+    margin: 0 40px 0 2px;
+}
+*/
+
+.loginBox .loginFieldset {
+    border-radius: 4px;
+    border: 0.5px solid black;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    padding: 11px 10px 15px 10px;
+    width: 280px;
+    height: 24px;
+    outline: none;
+}
+
+.loginBox input[type="email"] {
+    width: 260px;
+    height: 70px;
+    background-color: transparent;
+    border: none;
+    outline : none;
+    overflow: auto;
+    position: absolute;
+    top: 31%;
+    left: 23%;
+}
+
+.loginBox input[type="email"]:active:focus, .loginBox .loginFieldset input[type='email']:focus {
+    font-size:20px;
+}
+
+.loginBox input[type="email"]:focus::-webkit-input-placeholder, .loginBox .loginFieldset input[type="email"]:active:focus::-webkit-input-placeholder {
+    font-size: 12px;
+    display: block;
+    -webkit-transform: translateY(-27px);
+    transform: translateY(-27px);
+    background-color: #fff;
+    padding: 1px 5px 1px 5px;
+    width: 89px;
+}
+
+.loginBox input[type="password"] {
+    width: 260px;
+    height: 70px;
+    background-color: transparent;
+    border: none;
+    outline : none;
+    overflow: auto;
+    position: absolute;
+    top: 45.4%;
+    left: 23%;
+}
+
+.loginBox input[type="password"]:active:focus, .loginBox .loginFieldset input[type='password']:focus {
+    font-size: 20px;
+}
+
+.loginBox input[type="password"]:focus::-webkit-input-placeholder, .loginBox .loginFieldset input[type="password"]:active:focus::-webkit-input-placeholder {
+    font-size: 12px;
+    display: block;
+    -webkit-transform: translateY(-26px);
+    transform: translateY(-26px);
+    background-color: #fff;
+    padding: 1px 5px 1px 5px;
+    width: 112px;
+}
+
+::-webkit-placeholder{
+    font-size:15px;
+    color:#b7b7b7;
+    text-transform:capitalize;
+    -webkit-transform:translateY(0px);
+    transform:translateY(0px);
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out; 
+}
+
+::placeholder{
+    font-size:15px;
+    color:#b7b7b7;
+    text-transform:capitalize;
+    -webkit-transform:translateY(0px);
+    transform:translateY(0px);
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out; 
+}
+
+.loginBox input[type="submit"] {
+    border-radius: 4px;
+    border: 2px solid #8683f8;
+    background: #9390fb;
+    display: block;
+    margin: 60px auto;
+    text-align: center;
+    padding: 14px 40px;
+    outline: none;
+    transition: 0.25s;
+    cursor: pointer;
+    width: 200px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+.loginBox .forgetPassword {
+    position: relative;
+    left: 20%;
+    color: #93c7fd;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.informationBox {
+    float: left;
+    width: 500px;
+    position: relative;
+}
+
+.informationBox .signFont {
+    color: #0047ff;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+@keyframes animated-border {
+    0% {
+      box-shadow: 0 0 0 0 rgba(255,255,255,0.4);
+    }
+    100% {
+       box-shadow: 0 0 0 20px rgba(255,255,255,0);
+    }
+}
+
+.informationBox .theme {
+    width: 180px;
+    text-align: center;
+    margin: 100px 80px 80px 80px;
+}
+
+.informationBox .content {
+    width: 400px;
+    left: 20%;
+    margin: 140px 0 50px 50px;
+}
+
+.informationBox .icons {
+    width: 200px;
+    margin: 20px;
+    position: relative;
+    left: 30px;
+    top: 45px;
+}
+
+.informationBox .icons img {
+    margin: 0 5px;
+    height: 24px;
+    width: 24px;
+}
+
+

@@ -2,24 +2,18 @@ pipeline {
   agent {
     node {
       label 'my-nodejs'
-      tool 'Node.js 19.2.0'
+      tools {nodejs "Node.js 19.2.0"}
     }
   }
-  
   stages {
-    stage('Checkout') {
+    stage('Install dependencies') {
       steps {
-        git branch: 'master', url: 'https://github.com/EBFantasy/CI-CD-Project.git'
+        sh 'npm install'
       }
     }
-
-    stage('Build and Deploy') {
+    stage('Build') {
       steps {
-
-        sh 'npm install'
-
-        sh 'npm start'
-        
+        sh 'npm run build'
       }
     }
   }
